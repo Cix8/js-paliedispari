@@ -15,7 +15,7 @@ console.log(userNumber, userChoice);
 let computerNumber = randomNumber(1,5);
 console.log(computerNumber);
 
-let finalResult = oddOrEvenSum(userNumber, computerNumber, userChoice);
+let finalResult = oddOrEvenSum(userNumber, computerNumber, userChoiceCheck);
 console.log(finalResult);
 
 /**
@@ -36,10 +36,10 @@ function randomNumber(starting, ending) {
  * @param {String} userChoiceCheck -> is the user choice (odd or even)
  * @returns {String} -> says who wins between the two depending on whether the number resulting from the sum of the 2 previous numbers is odd or even
  */
-function oddOrEvenSum(num1, num2, userChoiceCheck) {
+function oddOrEvenSum(num1, num2, choice) {
     let sum = num1 + num2;
     let result;
-    if ((sum % 2 === 0 && userChoiceCheck === 'pari') || (sum % 2 === 1 && userChoiceCheck === 'dispari')) {
+    if ((sum % 2 === 0 && choice === 'pari') || (sum % 2 === 1 && choice === 'dispari')) {
         result = 'Il giocatore ha vinto';
     } else {
         result = 'Il computer ha vinto';
