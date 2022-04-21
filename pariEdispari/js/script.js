@@ -1,6 +1,13 @@
 let userChoice = prompt('Pari o dispari?');
 let userChoiceCheck = userChoice.toLowerCase();
 
+while (userChoiceCheck != 'pari' && userChoiceCheck != 'dispari') {
+    console.log(userChoice, userChoiceCheck);
+    alert('Scelta non valida, devi scegliere tra pari e dispari');
+    userChoice = prompt('Pari o dispari?');
+    userChoiceCheck = userChoice.toLowerCase();
+}
+
 console.log(userChoice, userChoiceCheck);
 
 let userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
@@ -33,7 +40,7 @@ function randomNumber(starting, ending) {
  * Description
  * @param {Number} num1 -> is the first number, chosen by the user, that we want to add to a second number
  * @param {Number} num2 -> is the second number, randomly generated , that we want to add to the first number
- * @param {String} userChoiceCheck -> is the user choice (odd or even)
+ * @param {String} choice -> is the user choice (odd or even)
  * @returns {String} -> says who wins between the two depending on whether the number resulting from the sum of the 2 previous numbers is odd or even
  */
 function oddOrEvenSum(num1, num2, choice) {
