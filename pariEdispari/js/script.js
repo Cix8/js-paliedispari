@@ -5,7 +5,7 @@ console.log(userChoice, userChoiceCheck);
 
 let userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
 
-while ((userNumber < 1 || userNumber > 5)) {
+while ((userNumber < 1 || userNumber > 5) || (isNaN(userNumber))) {
     alert('Il numero inserito non è valido');
     userNumber = prompt('Inserisci un numero da 1 a 5');
 }
