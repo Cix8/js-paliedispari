@@ -1,7 +1,7 @@
 let userChoice = prompt('Pari o dispari?');
 let userChoiceCheck = userChoice.toLowerCase();
 
-while (userChoiceCheck != 'pari' && userChoiceCheck != 'dispari') {
+while (userChoiceCheck !== 'pari' && userChoiceCheck !== 'dispari') {
     console.log(userChoice, userChoiceCheck);
     alert('Scelta non valida, devi scegliere tra pari e dispari');
     userChoice = prompt('Pari o dispari?');
