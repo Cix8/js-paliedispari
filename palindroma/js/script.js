@@ -1,4 +1,10 @@
-const userInput = prompt('Scrivi una parola per verificare se è palindroma');
+let userInput = prompt('Scrivi una parola per verificare se è palindroma');
+
+while (!isNaN(userInput)) {
+    alert('Il valore inserito non è una parola, riprova');
+    userInput = prompt('Scrivi una parola per verificare se è palindroma');
+}
+
 let userResult = isPalindorm(userInput);
 
 
